@@ -5,7 +5,7 @@
     $result = $conexao->query($sql);
     $user = $result->fetch_all(MYSQLI_ASSOC);
 
-    if($user){
+    if(!$user){
         header("location: formLogin.php");
     }else{
         session_start();

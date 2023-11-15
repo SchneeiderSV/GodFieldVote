@@ -21,8 +21,8 @@
             $result = $conexao->query($sql);
             $artefatos = $result->fetch_all(MYSQLI_ASSOC);
 
-            $sql = "SELECT pessoa.email FROM pessoa
-            WHERE pessoa.idPessoa = {$_SESSION['idPessoa']}";
+            $sql = "SELECT * FROM usuario
+            WHERE id = {$_SESSION['id']}";
             $result = $conexao->query($sql);
             $user = $result->fetch_all(MYSQLI_ASSOC);
 
@@ -40,6 +40,8 @@
                 echo "<a href='formArtefato.php'>Adicionar Artefato</a>";
             }
 
+
+        include("footer.php");
             
         ?>
 
