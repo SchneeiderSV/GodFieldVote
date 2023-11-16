@@ -1,6 +1,9 @@
 <?php
     include("header.php");
-    
+    if($_SESSION["isAdm"] != 1){
+        header("location: index.php");
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +16,7 @@
 </head>
 <body>
     <section>
-        <div class="container"></div>
+        
             <?php
 
                 $sql = "SELECT * FROM artefato";
@@ -41,7 +44,7 @@
 
             include("footer.php");
             ?>
-        </div>
+        
     </section>
 </body>
 </html>

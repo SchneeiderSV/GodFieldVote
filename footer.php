@@ -6,6 +6,7 @@
         }
     ?>
 
+    <a href="artefatosList.php">Lista de Artefatos</a>
     <a href="formLogin.php">Logout</a>
 
 </div>
