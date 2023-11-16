@@ -11,15 +11,15 @@
 </html>
     <section>
         <div class="container">
-            <form action="artefato.php" class="boxLogin" method="POST" autocomplete="off">
-                <h2>Register</h2>
+            <form action="artefato.php" class="boxLogin" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <h2>Adicionar Artefato</h2>
                 <div class="inputBox">
                     <label for="">Nome</label>
                     <input type="text" name="nome" required>
                 </div>
                 <div class="inputBox">
-                    <label for="">UrlImagem</label>
-                    <input type="text" name="img" required>
+                    <label for="">Arquivo</label>
+                    <input type="file" name="img" accept=".png, .jpeg, .webp, .jpg" required>
                 </div>
                 <button class="button">Adicionar</button>
             </form>

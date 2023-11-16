@@ -29,17 +29,12 @@
             if($artefatos){
                 foreach($artefatos as $artefato){
                     echo "Artefato: ".$artefato['nome'];
-                    echo "<img src='{$artefato['img']}'>";
+                    echo "<img src=images/{$artefato['img']} width='50' heigth='50'>";
                     echo "<br>";
                 }
             }else{
                 echo "Sem Artefatos";
             }
-
-            if($_SESSION['isAdm']) {
-                echo "<a href='formArtefato.php'>Adicionar Artefato</a>";
-            }
-
 
         include("footer.php");
             
