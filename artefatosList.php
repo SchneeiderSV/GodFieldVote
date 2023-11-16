@@ -13,8 +13,7 @@
 </head>
 <body>
     <section>
-
-        <div class="container">
+        <div class="container"></div>
             <?php
 
                 $sql = "SELECT * FROM artefato";
@@ -28,10 +27,10 @@
 
                 if($artefatos){
                     foreach($artefatos as $artefato){
-                        echo "<div class='artefatos'>";
-                        echo "<div class='artefato'>";
-                        echo "<h1>Artefato: ".$artefato['nome']."</h1>";
-                        echo "<img src=images/{$artefato['img']} width='300' heigth='300'>";
+                        echo "<div class='artefatosG'>";
+                        echo "<div class='artefatoG'>";
+                        echo "Artefato: ".$artefato['nome'];
+                        echo "<img src=images/{$artefato['img']} width='50' heigth='50'>";
                         echo "</div>";
                         echo "</div>";
                         echo "<br>";
@@ -40,10 +39,9 @@
                     echo "Sem Artefatos";
                 }
 
+            include("footer.php");
             ?>
-
         </div>
     </section>
-    <?php include("footer.php"); ?>
 </body>
 </html>
