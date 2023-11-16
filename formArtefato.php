@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 </html>
     <section>
         <div class="container">
-            <form action="register.php" class="boxLogin" method="POST" autocomplete="off">
+            <form action="artefato.php" class="boxLogin" method="POST" autocomplete="off">
                 <h2>Register</h2>
                 <div class="inputBox">
                     <label for="">Nome</label>
