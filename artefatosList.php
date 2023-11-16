@@ -34,6 +34,7 @@
                         echo "<div class='artefatoG'>";
                         echo "Artefato: ".$artefato['nome'];
                         echo "<img src=images/{$artefato['img']} width='50' heigth='50'>";
+                        echo "<a href='deletar.php?id={$artefato['id']}'>deletar</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "<br>";
