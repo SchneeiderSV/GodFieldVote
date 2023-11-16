@@ -17,8 +17,6 @@
         <div class="container">
             <?php
 
-                echo $_SESSION['id'];
-
                 $sql = "SELECT * FROM artefato";
                 $result = $conexao->query($sql);
                 $artefatos = $result->fetch_all(MYSQLI_ASSOC);
