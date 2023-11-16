@@ -23,4 +23,6 @@
                 $conexao->query($sql);
                 echo "foi";
     }
+    header("location: artefatosList.php");
+
 ?>
