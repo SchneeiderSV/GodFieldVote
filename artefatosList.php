@@ -45,7 +45,7 @@
 
             include("footer.php");
             ?>
-        
+        <a href="formArtefato.php"></a>
     </section>
 </body>
 </html>

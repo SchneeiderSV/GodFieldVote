@@ -1,12 +1,15 @@
 <div class="footer">
 
-    <?php
-        if($_SESSION['isAdm'] == 1) {
-            echo "<a href='formArtefato.php'>Adicionar Artefato</a>";
+    <a href="index.php">Menu</a>
+    <?php 
+        if($_SESSION['isAdm']){
+            echo "<a href='formArtefato.php'>Adicionar artefato</a>";
+            echo "<a href='artefatosList.php'>Lista de Artefatos</a>";
         }
+
     ?>
-
-    <a href="artefatosList.php">Lista de Artefatos</a>
+    
+    
+    
     <a href="formLogin.php">Logout</a>
-
 </div>
