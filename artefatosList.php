@@ -33,8 +33,9 @@
                         echo "<div class='artefatosG'>";
                         echo "<div class='artefatoG'>";
                         echo "Artefato: ".$artefato['nome'];
-                        echo "<img src=images/{$artefato['img']} width='50' heigth='50'>";
+                        echo "<img src=images/{$artefato['img']} width='60' heigth='60'>";
                         echo "<a href='deletar.php?id={$artefato['id']}'>deletar</a>";
+                        echo "<a href='formEditar.php?id={$artefato['id']}'>editar</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "<br>";
@@ -42,10 +43,10 @@
                 }else{
                     echo "Sem Artefatos";
                 }
-
-            include("footer.php");
+                
+                include("back.php");
             ?>
-        <a href="formArtefato.php"></a>
+        
     </section>
 </body>
 </html>

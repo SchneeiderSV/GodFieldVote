@@ -17,6 +17,8 @@
         <div class="container">
             <?php
 
+                echo $_SESSION['id'];
+
                 $sql = "SELECT * FROM artefato";
                 $result = $conexao->query($sql);
                 $artefatos = $result->fetch_all(MYSQLI_ASSOC);
@@ -30,8 +32,10 @@
                     foreach($artefatos as $artefato){
                         echo "<div class='artefatos'>";
                         echo "<div class='artefato'>";
-                        echo "<h1>Artefato: ".$artefato['nome']."</h1>";
-                        echo "<img src=images/{$artefato['img']} width='300' heigth='300'>";
+                        echo "<h4>Artefato: ".$artefato['nome']."</h4>";
+                        echo "<img src=images/{$artefato['img']} width='72' heigth='72'>";
+                        echo "<a href='votar.php?id={$artefato['id']}&vote=1'>Like</a>";
+                        echo "<a href='votar.php?id={$artefato['id']}&vote=0'>Dislike</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "<br>";

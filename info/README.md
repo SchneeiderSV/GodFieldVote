@@ -15,11 +15,11 @@ O sistema deve possuir dois papéis para as pessoas que vão o utilizar com perm
 - [ ] Ordenar de forma crescente ou decrescente os rankings de classificações
 
 #### Gerente
-- [ ] A pessoa que será gerente deve ser cadastrada no banco previamente (user: admin e password: senha123)
-- [ ] Fazer login e logout no sistema
-- [ ] Visualizar ranking dos itens classificados
-- [ ] Ordenar de forma crescente ou decrescente o ranking de classificações
-- [ ] Listar, adicionar, editar e excluir itens
+- [ X ] A pessoa que será gerente deve ser cadastrada no banco previamente (user: admin e password: senha123)
+- [ X ] Fazer login e logout no sistema
+- [ X ] Visualizar ranking dos itens classificados
+- [ X ] Ordenar de forma crescente ou decrescente o ranking de classificações
+- [ X ] Listar, adicionar, editar e excluir itens
 
 ### Regras de negócio
 Abaixo são especificadas regras que incidem sobre o usuo do sistema:
