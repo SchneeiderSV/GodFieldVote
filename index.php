@@ -17,6 +17,7 @@
         <div class="container">
             <?php
 
+
                 $sql = "SELECT * FROM artefato";
                 $result = $conexao->query($sql);
                 $artefatos = $result->fetch_all(MYSQLI_ASSOC);
@@ -26,22 +27,25 @@
                 $result = $conexao->query($sql);
                 $user = $result->fetch_all(MYSQLI_ASSOC);
 
-                if($artefatos){
-                    foreach($artefatos as $artefato){
-                        echo "<div class='artefatos'>";
-                        echo "<div class='artefato'>";
-                        echo "<h4>Artefato: ".$artefato['nome']."</h4>";
-                        echo "<img src=images/{$artefato['img']} width='72' heigth='72'>";
-                        echo "<a href='votar.php?id={$artefato['id']}&vote=1'>Like</a>";
-                        echo "<a href='votar.php?id={$artefato['id']}&vote=0'>Dislike</a>";
-                        echo "</div>";
-                        echo "</div>";
-                        echo "<br>";
-                    }
+                $sql = "SELECT * FROM artefato WHERE artefato.id NOT IN 
+                (SELECT DISTINCT usuario_artefato.artefatoID FROM usuario_artefato 
+                WHERE usuario_artefato.usuarioID = {$_SESSION['id']})";
+                $result = $conexao->query($sql);
+                $exclusivos = $result->fetch_all(MYSQLI_ASSOC);
+
+                if(!empty($exclusivos)){        
+                            echo "<div class='artefatos'>";
+                            echo "<div class='artefato'>";
+                            echo "<h4>Artefato: ".$exclusivos[0]['nome']."</h4>";
+                            echo "<img src=images/{$exclusivos[0]['img']} width='72' heigth='72'>";
+                            echo "<a href='votar.php?id={$exclusivos[0]['id']}&vote=1'>Like</a>";
+                            echo "<a href='votar.php?id={$exclusivos[0]['id']}&vote=0'>Dislike</a>";
+                            echo "</div>";
+                            echo "</div>";
+                            echo "<br>";
                 }else{
                     echo "Sem Artefatos";
                 }
-
             ?>
 
         </div>

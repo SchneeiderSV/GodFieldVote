@@ -13,8 +13,8 @@
             <form action="login.php" method="POST" class="boxLogin" autocomplete="off">
                 <h2>Login</h2>
                 <div class="inputBox">
-                    <label for="">Email</label>
-                    <input type="email" name="email" required>           
+                    <label for="">Nome</label>
+                    <input type="text" name="nome" required>           
                 </div>
                 <div class="inputBox">
                     <label for="">Password</label>

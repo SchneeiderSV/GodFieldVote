@@ -9,5 +9,8 @@ $sql = "INSERT INTO usuario_artefato(usuarioID,artefatoID,voto) values({$_SESSIO
 
 
 $conexao->query($sql);
+
+
+
 header("location: index.php");
 ?>

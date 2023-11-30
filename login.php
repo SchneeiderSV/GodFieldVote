@@ -1,7 +1,7 @@
 <?php
 
     $conexao = new mysqli("localhost","root","","godfield");  
-    $sql = "SELECT * FROM usuario WHERE email = '{$_POST['email']}' and senha = '{$_POST['senha']}'";
+    $sql = "SELECT * FROM usuario WHERE nome = '{$_POST['nome']}' and senha = '{$_POST['senha']}'";
     $result = $conexao->query($sql);
     $user = $result->fetch_all(MYSQLI_ASSOC);
 
