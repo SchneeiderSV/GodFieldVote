@@ -29,28 +29,43 @@
 
 
                 if(!isset($_GET["invert"])){
-                    $artefatos=array_reverse($artefatos);
-                    echo "<a href='rankingList.php?invert=3'>Inverter</a>";
+                    $_GET["invert"] = 2;
+                    echo "<a href='rankingList2.php?invert=3'>Inverter</a>";
+
+                } else {
+                    if(@$_GET["invert"] == 3){
+                        $artefatos=array_reverse($artefatos);
+                        echo "<a href='rankingList2.php?invert=2'>Inverter</a>";
+                    }
+                    if(@$_GET["invert"] == 2){
+                        echo "<a href='rankingList2.php?invert=3'>Inverter</a>";
+                    }
+                    
                 }
+
+                echo "<br>";
+
+
+
+                $sql = "SELECT artefato.nome, COUNT(voto) as cnt FROM usuario_artefato JOIN artefato ON artefato.id = artefatoID WHERE voto = 0 GROUP BY artefato.nome ORDER BY cnt DESC LIMIT 10 ";
+                $result = $conexao->query($sql);
+                $artefatos = $result->fetch_all(MYSQLI_ASSOC);
 
                 if(@$_GET["invert"] == 3){
                     $artefatos=array_reverse($artefatos);
-                    echo "<a href='rankingList.php?invert=2'>Inverter</a>";
                 }
-                if(@$_GET["invert"] == 2){
-                    echo "<a href='rankingList.php?invert=3'>Inverter</a>";
-                }
-                echo "<br>";
-
                 if($artefatos){
                     foreach($artefatos as $artefato){        
                         echo "Artefato: ".$artefato['nome']." - ";
-                        echo "Likes: ".$artefato['cnt']; 
+                        echo "Dislikes: ".$artefato['cnt']; 
                         echo "<br>";         
                     }
                 }else{
                     echo "Sem Artefatos";
                 }
+
+
+                
                 
             ?>
             </div>

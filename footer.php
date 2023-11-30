@@ -5,7 +5,8 @@
         if($_SESSION['isAdm']){
             echo "<a href='formArtefato.php'>Adicionar artefato</a>";
             echo "<a href='artefatosList.php'>Lista de Artefatos</a>";
-            echo "<a href='rankingList.php'>Ranking de Artefatos</a>";
+            echo "<a href='rankingList.php'>Ranking de Artefatos: Likes</a>";
+            echo "<a href='rankingList2.php'>Ranking de Artefatos: Deslikes</a>";
         }
 
     ?>
