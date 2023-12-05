@@ -13,6 +13,8 @@ div{
     justify-content: space-evenly;
     width: 100vw;
     height: 10vh;
+    text-align: center;
+
 }
 .container{
     width: 100vw;
@@ -23,19 +25,19 @@ div{
     
 }
 .boxLogin{
-    border: 3px solid black;
-    border-radius: 3rem;
-    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.70) 0px 3px 8px;
+    border-radius: 1rem;
+    padding: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 .inputBox{
     width: 18rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 3px;
 }
 .button{
@@ -57,15 +59,15 @@ div{
     gap: 2rem;
 }
 .artefato{
-    width: 5rem;
-    height: 26rem;
-    border: 3px solid black;
+    width: 36rem;
+    height: 36rem;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.70) 0px 3px 8px;
 }
 .menu{
     position: fixed;
@@ -74,4 +76,71 @@ div{
 }
 h3{
     display: inline;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+
+
+
+button{
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+button:hover,
+button:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+button:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+button:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+input{
+    font-family: inherit;
+    width: 70%;
+    border: 0;
+    border-bottom: 1px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    padding: 0px 0;
+    background: transparent;
+    transition: border-color 0.2s;
 }

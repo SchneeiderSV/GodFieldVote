@@ -37,9 +37,9 @@
                             echo "<div class='artefatos'>";
                             echo "<div class='artefato'>";
                             echo "<h4>Artefato: ".$exclusivos[0]['nome']."</h4>";
-                            echo "<img src=images/{$exclusivos[0]['img']} width='72' heigth='72'>";
-                            echo "<a href='votar.php?id={$exclusivos[0]['id']}&vote=1'>Like</a>";
-                            echo "<a href='votar.php?id={$exclusivos[0]['id']}&vote=0'>Dislike</a>";
+                            echo "<img src=images/{$exclusivos[0]['img']} width='250' heigth='250'>";
+                            echo "<a href='votar.php?id={$exclusivos[0]['id']}&vote=1'><button>Like</button></a>";
+                            echo "<a href='votar.php?id={$exclusivos[0]['id']}&vote=0'><button>Dislike</button></a>";
                             echo "</div>";
                             echo "</div>";
                             echo "<br>";
