@@ -17,7 +17,7 @@
                     <input type="text" name="nome" required>           
                 </div>
                 <div class="inputBox">
-                    <label for="">Password</label>
+                    <label for="">Senha</label>
                     <input type="password" name="senha" required>
                 </div>
                 <button class="button">Log in</button>
