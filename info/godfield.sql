@@ -3,9 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Nov-2023 às 19:22
+-- Tempo de geração: 07-Dez-2023 às 17:43
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.1.12
+
+CREATE DATABASE godfield;
+
+USE godfield;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,21 +42,21 @@ CREATE TABLE `artefato` (
 --
 
 INSERT INTO `artefato` (`id`, `nome`, `img`) VALUES
-(11, 'god1', '65565aab316b4.png'),
-(12, 'god2', '65565ab2b9ea0.png'),
-(13, 'god3', '65565aba467d2.png'),
-(14, 'god4', '65565ac0f221c.png'),
-(15, 'god5', '65565ac95d2b3.png'),
-(16, 'god6', '65565ad136a51.png'),
-(17, 'god7', '65565adba42d4.png'),
-(18, 'god8', '65565b03016c0.png'),
-(19, 'god9', '65565b0a7c461.png'),
-(20, 'god10', '65565b19dfab6.png'),
-(21, 'go11', '65565b21aae33.png'),
-(22, 'god12', '65565b2bbe285.png'),
-(23, 'god13', '65565b343d675.png'),
-(24, 'god14', '65565b3c125f2.png'),
-(25, 'god15', '65565b49c3cb0.png');
+(26, 'God1', '6571f5290ab7a.png'),
+(27, 'God 2', '6571f534b9b21.png'),
+(28, 'God 3', '6571f53cd41c3.png'),
+(29, 'God 4', '6571f545aca26.png'),
+(30, 'God 5', '6571f54e5da90.png'),
+(31, 'God 6', '6571f55a97268.png'),
+(32, 'God 7', '6571f5620672e.png'),
+(33, 'God 8', '6571f5687f09d.png'),
+(34, 'God 9', '6571f56ecf36f.png'),
+(35, 'God 10', '6571f576bf7a3.png'),
+(36, 'God 11', '6571f57e1ad18.png'),
+(37, 'God 12', '6571f58493f01.png'),
+(38, 'God 13', '6571f58cb7491.png'),
+(39, 'God 14', '6571f59333f3a.png'),
+(40, 'God 15', '6571f59a2823f.png');
 
 -- --------------------------------------------------------
 
@@ -120,7 +124,7 @@ ALTER TABLE `usuario_artefato`
 -- AUTO_INCREMENT de tabela `artefato`
 --
 ALTER TABLE `artefato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
@@ -132,7 +136,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuario_artefato`
 --
 ALTER TABLE `usuario_artefato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 
 --
 -- Restrições para despejos de tabelas
