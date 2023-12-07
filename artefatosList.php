@@ -1,12 +1,13 @@
 <?php
-    include("header.php");
-    if($_SESSION["isAdm"] != 1){
-        header("location: index.php");
-    }
+include("header.php");
+if ($_SESSION["isAdm"] != 1) {
+    header("location: index.php");
+}
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,39 +15,41 @@
     <title>Artefatos</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section>
-        
-            <?php
 
-                $sql = "SELECT * FROM artefato";
-                $result = $conexao->query($sql);
-                $artefatos = $result->fetch_all(MYSQLI_ASSOC);
+        <?php
 
-                $sql = "SELECT * FROM usuario
+        $sql = "SELECT * FROM artefato";
+        $result = $conexao->query($sql);
+        $artefatos = $result->fetch_all(MYSQLI_ASSOC);
+
+        $sql = "SELECT * FROM usuario
                 WHERE id = {$_SESSION['id']}";
-                $result = $conexao->query($sql);
-                $user = $result->fetch_all(MYSQLI_ASSOC);
+        $result = $conexao->query($sql);
+        $user = $result->fetch_all(MYSQLI_ASSOC);
 
-                if($artefatos){
-                    foreach($artefatos as $artefato){
-                        echo "<div class='artefatosG'>";
-                        echo "<div class='artefatoG'>";
-                        echo "Artefato: ".$artefato['nome'];
-                        echo "<img src=images/{$artefato['img']} width='60' heigth='60'>";
-                        echo "<a href='deletar.php?id={$artefato['id']}'>deletar</a>";
-                        echo "<a href='formEditar.php?id={$artefato['id']}'>editar</a>";
-                        echo "</div>";
-                        echo "</div>";
-                        echo "<br>";
-                    }
-                }else{
-                    echo "Sem Artefatos";
-                }
-                
-                include("back.php");
-            ?>
-        
+        if ($artefatos) {
+            foreach ($artefatos as $artefato) {
+                echo "<div class='artefatosG'>";
+                echo "<div class='artefatoG'>";
+                echo "Artefato: " . $artefato['nome'];
+                echo "<img src=images/{$artefato['img']} width='60' heigth='60'>";
+                echo "<a href='deletar.php?id={$artefato['id']}'>deletar</a>";
+                echo "<a href='formEditar.php?id={$artefato['id']}'>editar</a>";
+                echo "</div>";
+                echo "</div>";
+                echo "<br>";
+            }
+        } else {
+            echo "Sem Artefatos";
+        }
+
+        include("back.php");
+        ?>
+
     </section>
 </body>
+
 </html>

@@ -15,7 +15,7 @@
 <body>
     <section>
 
-    <div style="left: 40rem; top: 3rem; position: fixed;">
+    <div class="rankTitle">
         <h1>Ranking</h1>
     </div>
 

@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Artefato</title>
+    <title>Editar Artefato</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
     <section>
         <div class="container">
             <form action="editar.php" class="boxLogin" method="POST" enctype="multipart/form-data" autocomplete="off">
-                <h2>Adicionar Artefato</h2>
+                <h2>Editar Artefato</h2>
                 <div class="inputBox">
                     <label for="">Nome</label>
                     <input type="text" value="<?=$item['nome']?>" name="nome" required>

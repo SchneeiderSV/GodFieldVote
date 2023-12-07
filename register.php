@@ -6,7 +6,7 @@ $conexao = new mysqli("localhost", "root", "", "godfield");
 //validação do email
 $email = mysqli_real_escape_string($conexao, $_POST['email']);
 if (empty($email)) {
-    
+
     echo "<script>alert('Email é obrigatório.'); window.location.href='formRegister.php';</script>";
     exit;
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strpos($email, "@aluno.feliz.ifrs.edu.br") === false) {
@@ -29,7 +29,7 @@ $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 $sql = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 if ($conexao->query($sql)) {
-=
+
     header("location: formLogin.php");
 } else {
 
