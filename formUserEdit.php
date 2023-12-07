@@ -5,6 +5,7 @@
     $result = $conexao->query($sql);
     $user = $result->fetch_assoc();
     
+    
 ?>
 
 
@@ -34,6 +35,7 @@
             </form>
         </div>
     </section>
+    <?php include("footer.php"); ?>
 </body>
 </html>
 

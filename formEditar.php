@@ -1,6 +1,5 @@
 <?php
-
-    $conexao = new mysqli("localhost","root","","godfield");
+    include("header.php");
     $artefatos_id = $_GET['id'];
     $sql = "SELECT * FROM artefato where id = $artefatos_id";
     $result = $conexao->query($sql);
@@ -37,6 +36,7 @@
             </form>
         </div>
     </section>
+    <?php include("footer.php") ?>
 </body>
 </html>
 

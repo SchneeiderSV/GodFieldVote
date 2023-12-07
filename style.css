@@ -162,3 +162,9 @@ input{
     display: flex;
     justify-content: space-evenly;
 }
+
+hr{
+
+    border-top: 1px solid #000000;
+  margin: 7.5px 0;
+}

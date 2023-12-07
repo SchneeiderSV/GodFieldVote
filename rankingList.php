@@ -30,15 +30,15 @@
 
                 if(!isset($_GET["invert"])){
                     $artefatos=array_reverse($artefatos);
-                    echo "<a href='rankingList.php?invert=3'>Inverter</a>";
+                    echo "<a href='rankingList.php?invert=3'><button>Inverter</button></a>";
                 }
 
                 if(@$_GET["invert"] == 3){
                     $artefatos=array_reverse($artefatos);
-                    echo "<a href='rankingList.php?invert=2'>Inverter</a>";
+                    echo "<a href='rankingList.php?invert=2'><button>Inverter</button></a>";
                 }
                 if(@$_GET["invert"] == 2){
-                    echo "<a href='rankingList.php?invert=3'>Inverter</a>";
+                    echo "<a href='rankingList.php?invert=3'><button>Inverter</button></a>";
                 }
                 echo "<br>";
 
@@ -46,7 +46,8 @@
                     foreach($artefatos as $artefato){        
                         echo "Artefato: ".$artefato['nome']." - ";
                         echo "Likes: ".$artefato['cnt']; 
-                        echo "<br>";         
+                        echo "<hr>";  
+                              
                     }
                 }else{
                     echo "Sem Artefatos";
